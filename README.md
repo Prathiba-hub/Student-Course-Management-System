@@ -1,6 +1,6 @@
-# 🎓 Student Course Management and Learning Progress Tracking System
+# Student Course Management and Learning Progress Tracking System
 
-## 📖 Project Overview
+## Project Overview
 
 The **Student Course Management and Learning Progress Tracking System** is a Full Stack Web Application designed to simplify academic course enrollment and learning management. The system allows students to register, log in, browse available courses, enroll in courses, access learning materials, track their learning progress, and receive notifications.
 
@@ -8,7 +8,7 @@ Administrators can manage students, courses, enrollments, and monitor overall le
 
 ---
 
-# ❗ Problem Statement
+# Problem Statement
 
 Many educational institutions still manage course enrollment and student learning progress manually or through multiple disconnected systems. This creates several challenges:
 
@@ -22,7 +22,7 @@ This project provides a centralized web-based platform that simplifies course ma
 
 ---
 
-# 🎯 Project Objectives
+# Project Objectives
 
 - Provide secure student registration and login.
 - Allow students to browse available courses.
@@ -35,9 +35,9 @@ This project provides a centralized web-based platform that simplifies course ma
 
 ---
 
-# ✨ Features
+# Features
 
-## 👨‍🎓 Student Features
+## Student Features
 
 - User Registration
 - Secure Login
@@ -54,7 +54,7 @@ This project provides a centralized web-based platform that simplifies course ma
 
 ---
 
-## 👨‍💼 Administrator Features
+## Administrator Features
 
 - Secure Admin Login
 - Add New Courses
@@ -68,7 +68,7 @@ This project provides a centralized web-based platform that simplifies course ma
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 ## Frontend
 
@@ -109,7 +109,7 @@ This project provides a centralized web-based platform that simplifies course ma
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 Student-Course-Management-System/
@@ -141,7 +141,7 @@ Student-Course-Management-System/
 
 ---
 
-# 👥 User Roles
+# User Roles
 
 ## Student
 
@@ -171,9 +171,9 @@ Administrators can:
 
 ---
 
-# 📄 Application Pages
+# Application Pages
 
-## 🏠 Home Page
+## Home Page
 
 - Welcome Section
 - Navigation Bar
@@ -184,7 +184,7 @@ Administrators can:
 
 ---
 
-## 🔐 Login Page
+## Login Page
 
 - Email
 - Password
@@ -194,7 +194,7 @@ Administrators can:
 
 ---
 
-## 📝 Register Page
+## Register Page
 
 - Name
 - Email
@@ -205,7 +205,7 @@ Administrators can:
 
 ---
 
-## 📊 Dashboard
+## Dashboard
 
 - Welcome Message
 - Total Courses
@@ -217,7 +217,7 @@ Administrators can:
 
 ---
 
-# 🔄 Application Workflow
+# Application Workflow
 
 ```
 Home Page
@@ -241,7 +241,7 @@ Dashboard
 
 ---
 
-# 🗄 Database Tables
+# Database Tables
 
 ## Students
 
@@ -283,7 +283,7 @@ Dashboard
 
 ---
 
-# 🚀 Future Enhancements
+# Future Enhancements
 
 - Email Notifications
 - Online Assessments
@@ -295,7 +295,7 @@ Dashboard
 
 ---
 
-# 📌 Installation
+# Installation
 
 Clone the repository:
 
@@ -323,13 +323,13 @@ npm start
 
 ---
 
-# 📈 Project Status
+# Project Status
 
-🚧 Currently Under Development
+Currently Under Development
 
 ---
 
-# 🤝 Contributing
+# Contributing
 
 Contributions are welcome.
 
@@ -341,13 +341,13 @@ Contributions are welcome.
 
 ---
 
-# 📜 License
+# License
 
 This project is developed for educational purposes as part of a Full Stack Web Development course.
 
 ---
 
-# 👩‍💻 Author
+# Author
 
 **Prathiba Devendiran**
 
