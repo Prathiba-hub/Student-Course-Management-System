@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | EduTrack LMS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100vh;
+background:#1e3a8a;
+color:white;
+padding:25px;
+}
+
+.sidebar .logo{
+text-align:center;
+margin-bottom:35px;
+}
+
+.sidebar .logo i{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.sidebar h2{
+font-size:24px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar ul li{
+margin:18px 0;
+}
+
+.sidebar ul li a{
+display:block;
+padding:12px;
+text-decoration:none;
+color:white;
+border-radius:8px;
+transition:.3s;
+}
+
+.sidebar ul li a:hover{
+background:white;
+color:#1e3a8a;
+}
+
+.sidebar i{
+margin-right:10px;
+}
+
+/* Main */
+
+.main{
+margin-left:260px;
+width:100%;
+padding:30px;
+}
+
+/* Header */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.header h1{
+color:#1e3a8a;
+}
+
+.admin-profile{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.admin-profile img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+/* Banner */
+
+.banner{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+padding:35px;
+border-radius:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+margin-bottom:35px;
+}
+
+.banner img{
+width:180px;
+}
+
+.banner h2{
+margin-bottom:10px;
+font-size:30px;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:35px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:35px;
+color:#1e3a8a;
+margin-bottom:15px;
+}
+
+.card h2{
+margin-bottom:8px;
+color:#1e3a8a;
+}
+
+.card p{
+color:#666;
+}
+
+/* Section */
+
+.section-title{
+font-size:25px;
+margin-bottom:18px;
+color:#333;
+}
+
+/* Table */
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+th{
+background:#1e3a8a;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+.status-active{
+color:green;
+font-weight:bold;
+}
+
+.status-pending{
+color:orange;
+font-weight:bold;
+}
+
+.action-btn{
+padding:8px 15px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin:2px;
+font-size:13px;
+}
+
+.edit{
+background:#0d6efd;
+color:white;
+}
+
+.delete{
+background:#dc3545;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h2>EduTrack Admin</h2>
+
+</div>
+
+<ul>
+
+<li><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+
+<li><a href="#"><i class="fa-solid fa-users"></i>Students</a></li>
+
+<li><a href="#"><i class="fa-solid fa-book"></i>Courses</a></li>
+
+<li><a href="#"><i class="fa-solid fa-user-plus"></i>Enrollments</a></li>
+
+<li><a href="#"><i class="fa-solid fa-chart-column"></i>Reports</a></li>
+
+<li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+
+<li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<div class="header">
+
+<h1>Administrator Dashboard</h1>
+
+<div class="admin-profile">
+
+<img src="https://i.pravatar.cc/100?img=12">
+
+<span>Admin</span>
+
+</div>
+
+</div>
+
+<!-- Banner -->
+
+<div class="banner">
+
+<div>
+
+<h2>Welcome Administrator 👋</h2>
+
+<p>Manage students, courses and monitor the entire learning platform.</p>
+
+</div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+</div>
+
+<!-- Statistics -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>520</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-book"></i>
+
+<h2>24</h2>
+
+<p>Total Courses</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-check"></i>
+
+<h2>412</h2>
+
+<p>Active Enrollments</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-award"></i>
+
+<h2>186</h2>
+
+<p>Certificates Issued</p>
+
+</div>
+
+</div>
+
+<!-- Student Management -->
+
+<h2 class="section-title">
+
+Student Management
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Student ID</th>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+<tr>
+
+<td>ST001</td>
+
+<td>Prathiba Devendiran</td>
+
+<td>B.Sc AI</td>
+
+<td class="status-active">Active</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>ST002</td>
+
+<td>Rahul Kumar</td>
+
+<td>BCA</td>
+
+<td class="status-active">Active</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>ST003</td>
+
+<td>Anjali Sharma</td>
+
+<td>MCA</td>
+
+<td class="status-pending">Pending</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>ST004</td>
+
+<td>Arun Prakash</td>
+
+<td>B.Sc CS</td>
+
+<td class="status-active">Active</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- Course Management -->
+
+<h2 class="section-title" style="margin-top:35px;">
+
+Course Management
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Course ID</th>
+
+<th>Course Name</th>
+
+<th>Instructor</th>
+
+<th>Students</th>
+
+<th>Actions</th>
+
+</tr>
+
+<tr>
+
+<td>CS101</td>
+
+<td>Full Stack Development</td>
+
+<td>Dr. Kumar</td>
+
+<td>120</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>AI205</td>
+
+<td>Artificial Intelligence</td>
+
+<td>Dr. Meena</td>
+
+<td>98</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>PY301</td>
+
+<td>Python Programming</td>
+
+<td>Prof. Rahul</td>
+
+<td>150</td>
+
+<td>
+
+<button class="action-btn edit">Edit</button>
+
+<button class="action-btn delete">Delete</button>
+
+</td>
+
+</tr>
+
+</table>
+
+<!-- Analytics -->
+
+<h2 class="section-title" style="margin-top:35px;">
+
+Platform Analytics
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>92%</h2>
+
+<p>Student Attendance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>86%</h2>
+
+<p>Course Completion Rate</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<h2>58</h2>
+
+<p>New Registrations This Month</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<h2>132</h2>
+
+<p>Assignments Submitted Today</p>
+
+</div>
+
+</div>
+
+<!-- Recent Activities -->
+
+<div class="notifications">
+
+<h2>🔔 Recent Activities</h2>
+
+<ul>
+
+<li>✅ Prathiba Devendiran enrolled in Full Stack Development.</li>
+
+<li>📚 Artificial Intelligence course updated successfully.</li>
+
+<li>👨‍🎓 Rahul Kumar completed Python Programming.</li>
+
+<li>🏆 12 certificates generated today.</li>
+
+<li>📊 Monthly academic report generated successfully.</li>
+
+</ul>
+
+</div>
+
+<!-- Settings -->
+
+<div class="profile-card">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div class="profile-info">
+
+<h3>Administrator Profile</h3>
+
+<p><strong>Name:</strong> System Administrator</p>
+
+<p><strong>Email:</strong> admin@edutrack.com</p>
+
+<p><strong>Role:</strong> Super Administrator</p>
+
+<p><strong>Last Login:</strong> Today, 10:30 AM</p>
+
+</div>
+
+</div>
+
+<!-- Logout -->
+
+<div class="logout">
+
+<button onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+<style>
+
+/* Notifications */
+
+.notifications{
+
+margin-top:35px;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.notifications ul{
+
+padding-left:20px;
+margin-top:15px;
+
+}
+
+.notifications li{
+
+margin-bottom:12px;
+
+}
+
+/* Profile */
+
+.profile-card{
+
+margin-top:35px;
+display:flex;
+align-items:center;
+gap:20px;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.profile-card img{
+
+width:90px;
+height:90px;
+border-radius:50%;
+
+}
+
+.profile-info h3{
+
+color:#1e3a8a;
+margin-bottom:10px;
+
+}
+
+.logout{
+
+margin-top:30px;
+
+}
+
+.logout button{
+
+padding:12px 30px;
+background:#dc3545;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+
+}
+
+.logout button:hover{
+
+background:#bb2d3b;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.sidebar{
+
+position:relative;
+width:100%;
+height:auto;
+
+}
+
+.main{
+
+margin-left:0;
+
+}
+
+body{
+
+flex-direction:column;
+
+}
+
+.profile-card{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.header{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.banner{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.banner img{
+
+margin-top:20px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+function logout(){
+
+if(confirm("Are you sure you want to logout?")){
+
+window.location.href="index.html";
+
+}
+
+}
+
+const buttons=document.querySelectorAll(".edit");
+
+buttons.forEach(btn=>{
+
+btn.onclick=function(){
+
+alert("Edit feature will be connected with backend.");
+
+}
+
+});
+
+const deleteButtons=document.querySelectorAll(".delete");
+
+deleteButtons.forEach(btn=>{
+
+btn.onclick=function(){
+
+if(confirm("Delete this record?")){
+
+alert("Record deleted successfully!");
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

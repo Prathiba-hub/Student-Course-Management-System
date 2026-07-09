@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration | EduTrack LMS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0d6efd,#4e9eff);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+}
+
+.container{
+width:500px;
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.logo i{
+font-size:60px;
+color:#0d6efd;
+}
+
+.logo h2{
+margin-top:10px;
+color:#0d6efd;
+}
+
+.logo p{
+color:#666;
+margin-top:5px;
+}
+
+.input-box{
+margin-bottom:18px;
+}
+
+.input-box label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+}
+
+.input-box input,
+.input-box select{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+outline:none;
+transition:.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+border-color:#0d6efd;
+}
+
+.password-box{
+position:relative;
+}
+
+.password-box input{
+padding-right:45px;
+}
+
+.password-box i{
+position:absolute;
+right:15px;
+top:14px;
+cursor:pointer;
+color:#666;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#0b5ed7;
+}
+
+.links{
+margin-top:20px;
+text-align:center;
+}
+
+.links a{
+text-decoration:none;
+color:#0d6efd;
+font-weight:600;
+}
+
+.back{
+margin-top:12px;
+text-align:center;
+}
+
+.back a{
+text-decoration:none;
+color:#555;
+}
+
+@media(max-width:550px){
+
+.container{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<h2>Student Registration</h2>
+
+<p>Create your EduTrack account</p>
+
+</div>
+
+<form action="student-login.html">
+
+<div class="input-box">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+</div>
+
+<div class="input-box">
+<label>Student ID</label>
+<input type="text" placeholder="Enter Student ID" required>
+</div>
+
+<div class="input-box">
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email" required>
+</div>
+
+<div class="input-box">
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number" required>
+</div>
+
+<div class="input-box">
+<label>Department</label>
+
+<select required>
+
+<option value="">Select Department</option>
+
+<option>B.Sc Computer Science with AI</option>
+
+<option>B.Sc Computer Science</option>
+
+<option>BCA</option>
+
+<option>B.Sc Information Technology</option>
+
+<option>MCA</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+<label>Password</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Create password"
+required>
+
+<i class="fa-solid fa-eye" id="togglePassword"></i>
+
+</div>
+
+</div>
+
+<div class="input-box">
+<label>Confirm Password</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm password"
+required>
+
+<i class="fa-solid fa-eye" id="toggleConfirm"></i>
+
+</div>
+
+</div>
+
+<button type="submit">
+
+<i class="fa-solid fa-user-check"></i>
+
+Register
+
+</button>
+
+</form>
+
+<div class="links">
+
+Already have an account?
+
+<a href="student-login.html">
+
+Login
+
+</a>
+
+</div>
+
+<div class="back">
+
+<a href="index.html">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function toggle(inputId,iconId){
+
+const input=document.getElementById(inputId);
+const icon=document.getElementById(iconId);
+
+if(input.type==="password"){
+
+input.type="text";
+icon.classList.replace("fa-eye","fa-eye-slash");
+
+}else{
+
+input.type="password";
+icon.classList.replace("fa-eye-slash","fa-eye");
+
+}
+
+}
+
+document.getElementById("togglePassword").onclick=function(){
+
+toggle("password","togglePassword");
+
+}
+
+document.getElementById("toggleConfirm").onclick=function(){
+
+toggle("confirmPassword","toggleConfirm");
+
+}
+
+</script>
+
+</body>
+</html>
