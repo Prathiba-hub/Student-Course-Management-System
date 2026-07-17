@@ -1,0 +1,569 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.7;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    height:70vh;
+    background:linear-gradient(rgba(30,58,138,.85),rgba(37,99,235,.85)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+.hero-content button{
+
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#2563eb;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.hero-content button:hover{
+
+    transform:translateY(-5px);
+    background:#dbeafe;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    padding:80px 8%;
+
+}
+
+.about h2{
+
+    text-align:center;
+    color:#2563eb;
+    font-size:36px;
+    margin-bottom:50px;
+
+}
+
+.about-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+
+}
+
+.about-card{
+
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.about-card h3{
+
+    color:#2563eb;
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact-section{
+
+    padding:0 8% 80px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+}
+
+.contact-info,
+.contact-form{
+
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-info h2,
+.contact-form h2{
+
+    color:#2563eb;
+    margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   SOCIAL BUTTONS
+=========================== */
+
+.social-icons{
+
+    margin-top:30px;
+
+}
+
+.social-icons button{
+
+    padding:12px 18px;
+    margin:8px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.social-icons button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+   CONTACT FORM
+=========================== */
+
+.contact-form form{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+    resize:vertical;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+
+}
+
+.contact-form button{
+
+    padding:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+    padding:0 8% 80px;
+
+}
+
+.faq h2{
+
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:40px;
+    font-size:34px;
+
+}
+
+.faq-item{
+
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:6px solid #2563eb;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+
+}
+
+.faq-item h3{
+
+    color:#1e3a8a;
+    margin-bottom:12px;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.7;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    height:70vh;
+    background:linear-gradient(rgba(30,58,138,.85),rgba(37,99,235,.85)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+.hero-content button{
+
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#2563eb;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.hero-content button:hover{
+
+    transform:translateY(-5px);
+    background:#dbeafe;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    padding:80px 8%;
+
+}
+
+.about h2{
+
+    text-align:center;
+    color:#2563eb;
+    font-size:36px;
+    margin-bottom:50px;
+
+}
+
+.about-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+
+}
+
+.about-card{
+
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.about-card h3{
+
+    color:#2563eb;
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact-section{
+
+    padding:0 8% 80px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+}
+
+.contact-info,
+.contact-form{
+
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-info h2,
+.contact-form h2{
+
+    color:#2563eb;
+    margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   SOCIAL BUTTONS
+=========================== */
+
+.social-icons{
+
+    margin-top:30px;
+
+}
+
+.social-icons button{
+
+    padding:12px 18px;
+    margin:8px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.social-icons button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+   CONTACT FORM
+=========================== */
+
+.contact-form form{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+    resize:vertical;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+
+}
+
+.contact-form button{
+
+    padding:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+    padding:0 8% 80px;
+
+}
+
+.faq h2{
+
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:40px;
+    font-size:34px;
+
+}
+
+.faq-item{
+
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:6px solid #2563eb;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+
+}
+
+.faq-item h3{
+
+    color:#1e3a8a;
+    margin-bottom:12px;
+
+}

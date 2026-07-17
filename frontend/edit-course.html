@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Course</title>
+
+    <link rel="stylesheet" href="css/edit-course.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <h1>Edit Course</h1>
+
+        <p>
+            Update course details, modify instructor information,
+            change course category, duration, and upload a new course thumbnail.
+        </p>
+
+    </div>
+
+    <div class="right-panel">
+
+        <form>
+
+            <h2>Update Course Details</h2>
+
+            <div class="input-box">
+
+                <label>Course Name</label>
+
+                <input
+                    type="text"
+                    value="Full Stack Development">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Instructor Name</label>
+
+                <input
+                    type="text"
+                    value="John Smith">
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Duration</label>
+
+                    <input
+                        type="text"
+                        value="12 Weeks">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Difficulty Level</label>
+
+                    <select>
+
+                        <option>Beginner</option>
+                        <option selected>Intermediate</option>
+                        <option>Advanced</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Category</label>
+
+                <select>
+
+                    <option selected>Web Development</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Machine Learning</option>
+                    <option>Programming</option>
+                    <option>Data Science</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Description</label>
+
+                <textarea rows="5">
+Learn HTML, CSS, JavaScript, React, Node.js, Express.js and MongoDB by building real-world projects.
+                </textarea>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Update Thumbnail</label>
+
+                <input type="file">
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="update-btn">
+
+                    Update Course
+
+                </button>
+
+                <button class="delete-btn" type="button">
+
+                    Delete Course
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
